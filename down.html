@@ -1,0 +1,38 @@
+<html ng-app="root">
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mycontrol.js"></script>
+</head>
+
+<body ng-controller="control">
+
+<table>
+<tr>
+<td>
+
+<button><a href="#!/right">HOME</a></button><br><br><br>
+<button><a href="#!/admin">ADMIN</a></button><br><br><br>
+<button><a href="#!/view">VIEW RESULT</a></button><br><br><br>
+
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<div ng-view="">
+</div>
+</td>
+</table>
+
+
+
+</body>
+
+</html>

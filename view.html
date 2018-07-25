@@ -1,0 +1,27 @@
+<html ng-app="root">
+<head>
+	<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mycontrol.js">
+</script>
+</head>
+<body ng-controller="control">
+<div align="center">
+  <h2 style="color:blue;">RECENT UPDATES</h2><br><br>
+Enter particular over to view details:<input type="text" ng-model="val"/><br><br>
+
+<ul style="list-style-type: none;">
+<li ng-repeat="get1 in print1 | filter:val">
+
+<p style="color:red;">OVER DETAILS:</p>
+Current over:{{get1.overs}} <br> 
+Highlight   :{{get1.highlights}} <br> 
+Description :{{get1.defines}}<br><br><br>
+
+</li>
+</ul>
+
+</div>
+</body>
+</html>

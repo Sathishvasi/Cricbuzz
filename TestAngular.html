@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>GetJson</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+     <script type="text/javascript">
+        var ap = angular.module("myApp",[]);
+        ap.controller("myController",function($scope, $http){
+           $http.get("Data.json",function(response){
+              $scope.myValue = response;
+           });
+        });
+     </script>
+</head>
+<body ng-controller="myController">
+<ul>
+<li ng-repeat = "data in myValue">
+ {{ data.name }}
+ {{ data.age }}
+</li>
+</ul>
+</body>
+</html>

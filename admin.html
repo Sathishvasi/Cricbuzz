@@ -1,0 +1,48 @@
+<html ng-app="root">
+<head>
+ <title></title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="mycontrol.js"></script>
+
+</head>
+<body ng-controller="control">
+
+<form name="validate" >
+
+<div align="center">
+<br><br><br>
+
+  <h2  style="color:blue;">ADMIN LOGIN</h2><br><br>
+Enter admin password:<input type="password" ng-model="pass" name="get" required/>
+<span style="color:Red" ng-show="validate.get.$error.required"> Required! </span>
+<br><br>
+<input type="button" value="LOGIN" ng-click="call()"/><br><br><br><br>
+
+<ul style="list-style-type: none;">
+<li ng-repeat="get in val">
+
+<b>ENTER YOUR DETAILS</b><br><br><br>
+Select over:
+<select ng-init="drop1 = range[0]" ng-model="drop1">
+<option ng-repeat="y in range">{{y}}</option>
+</select>
+<br><br>
+Select highlight:
+<select ng-init="drop2 = news[0]" ng-model="drop2">
+<option ng-repeat="x in news">{{x}}</option>
+</select>
+<br><br>
+Enter Description:<input ng-model="define" type="textarea" placeholder="Define about this over" /><br><br>
+
+<input type="button" value="UPDATE" ng-click="update(drop1,drop2,define)"/><br><br><br><br>
+
+</li>
+</ul>
+
+</div>
+</form>
+</body>
+</html>
+
